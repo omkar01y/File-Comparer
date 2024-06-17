@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\bottom.png" />
+    <None Remove="images\file.png" />
+    <None Remove="images\Folder.png" />
+    <None Remove="images\leftA.png" />
+    <None Remove="images\merge.png" />
+    <None Remove="images\next.png" />
+    <None Remove="images\option.png" />
+    <None Remove="images\previous.png" />
+    <None Remove="images\redo.png" />
+    <None Remove="images\refresh.png" />
+    <None Remove="images\Righta.png" />
+    <None Remove="images\save.png" />
+    <None Remove="images\sync.png" />
+    <None Remove="images\text.png" />
+    <None Remove="images\top.png" />
+    <None Remove="images\tx.png" />
+    <None Remove="images\undo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DiffPlex" Version="1.7.2" />
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9">
+      <GeneratePathProperty></GeneratePathProperty>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\bottom.png" />
+    <Resource Include="images\compare.png" />
+    <Resource Include="images\file.png" />
+    <Resource Include="images\Folder.png" />
+    <Resource Include="images\leftA.png" />
+    <Resource Include="images\merge.png" />
+    <Resource Include="images\next.png" />
+    <Resource Include="images\option.png" />
+    <Resource Include="images\previous.png" />
+    <Resource Include="images\redo.png" />
+    <Resource Include="images\refresh.png" />
+    <Resource Include="images\Righta.png" />
+    <Resource Include="images\save.png" />
+    <Resource Include="images\sync.png" />
+    <Resource Include="images\text.png" />
+    <Resource Include="images\top.png" />
+    <Resource Include="images\tx.png" />
+    <Resource Include="images\undo.png" />
+  </ItemGroup>
+
+</Project>

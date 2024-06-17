@@ -1,0 +1,83 @@
+﻿<Window x:Class="FileComparer.Home"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileComparer"
+        mc:Ignorable="d"
+        Title="Home-FileCpmparer" Height="450" Width="800" Icon="images/compare.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MinHeight="26"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="DarkGray">
+            <Menu IsMainMenu="True" Background="DarkGray" Foreground="Black">
+                <MenuItem Header="_Session" >
+                    <MenuItem Header="New Session">
+                        <MenuItem Header="Text compare" Click="window">
+                            <MenuItem.Icon>
+                                <Image Source="tx.png"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Text Merge" Click="window">
+                            <MenuItem.Icon>
+                                <Image Source="text.png"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                        <MenuItem Header="Folder Sync" Click="syncwindow">
+                            <MenuItem.Icon>
+                                <Image Source="sync.png"></Image>
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Exit"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Edit">
+                </MenuItem>
+            </Menu>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0" >
+                <StackPanel Orientation="Vertical">
+                    <TextBox Text="SessionList" Foreground="Black" BorderBrush="Black"></TextBox>
+
+                    <ListBox x:Name="sessionListBox" HorizontalAlignment="Left" Height="650"  Margin="10" VerticalAlignment="Top" Width="250" 
+                      SelectionChanged="sessionListBox_SelectionChanged" Background="LightGray"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Column="1" >
+                <StackPanel Orientation="Horizontal" Margin="415,70,-30,28" Height="100"  >
+                    
+                       <Button Click="syncwindow" Margin="15" >
+                        <StackPanel Height="100" >
+                        <Image Source="images/sync.png" Height="50" Width="50" ></Image>
+                            <TextBlock Text="Folder Sync" x:Name="sync" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Click="window" Margin="15">
+                        <StackPanel Height="100">
+                            <Image Source="images/text.png" Height="40" Width="40"></Image>
+                            <TextBlock Margin="0,9,0,0" Text="Text Merge" x:Name="tm" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Click="window" Margin="15">
+                        <StackPanel Height="100" >
+                            <Image Source="images/tx.png" Height="40" Width="40" ></Image>
+                            <TextBlock Margin="0,9,0,0" Text="Text Compare" HorizontalAlignment="Center" VerticalAlignment="Bottom"></TextBlock>
+                        </StackPanel>
+                    </Button >
+                </StackPanel>
+            </Grid>
+
+
+        </Grid>
+    </Grid>
+</Window>
